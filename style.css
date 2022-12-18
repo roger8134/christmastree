@@ -20,7 +20,7 @@
 }
 .santa {
   height: 220px;
-  width: 175px;
+  width: 200px;
   background-color: #e84701;
   border-radius: 80px;
   position: absolute;
@@ -79,9 +79,20 @@
   animation: wave 1.5s infinite;
   transform-origin: right;
 }
+.mid{
+  width: 10px;
+  height: 18px;
+  position: absolute;
+  background: #fad2af;
+  border-radius: 50px;
+  left: -90px;
+  top: -8px;
+  /* animation: wave 1.5s infinite; */
+
+}
 @keyframes wave {
   50% {
-    transform: rotate(15deg);
+    transform: rotate(5deg);
   }
 }
 .hand-r:before {
@@ -207,7 +218,7 @@
   background-color: #000000;
   position: absolute;
   top: 220px;
-  left: 43px;
+  left: 55px;
   border-radius: 20px 0 0 0;
 }
 .shoe:before {
