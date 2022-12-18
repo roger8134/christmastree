@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>聖誕快樂</title>
+    </head>
     <style>
-        * {
+* {
     padding: 0;
     margin: 0;
     list-style: none;
 } 
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
 
     height: 100vh;
-    background-color: rgb(54, 66, 70);
+    background-color: #111111;
+}
+.snow,
+.snow::before,
+.snow::after {
+  content: "";
+  background: radial-gradient(3px 3px at 100px 50px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #fff, transparent),
+    radial-gradient(5px 5px at 300px 80px, #fff, transparent),
+    radial-gradient(6px 6px at 400px 130px, #fff, transparent),
+    radial-gradient(3px 3px at 540px 480px, #fff, transparent),
+    radial-gradient(4px 4px at 50px 230px, #fff, transparent),
+    radial-gradient(5px 5px at 120px 680px, #fff, transparent),
+    radial-gradient(6px 6px at 223px 430px, #fff, transparent),
+    radial-gradient(3px 3px at 700px 300px, #fff, transparent),
+    radial-gradient(4px 4px at 760px 550px, #fff, transparent),
+    radial-gradient(5px 5px at 550px 280px, #fff, transparent),
+    radial-gradient(6px 6px at 650px 630px, #fff, transparent);
+  background-size: 800px 800px;
+  position: absolute;
+  inset: -800px 0 0 0;
+  animation: animate 5s linear infinite;
+}
+.snow::before {
+  margin: -390px;
+  opacity: 0.6;
+  animation-duration: 6s;
+  animation-delay: -1.5s;
+}
+.snow::after {
+  margin: -130px;
+  opacity: 0.8;
+
+  animation-duration: 10s;
 }
 
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(800px);
+  }
+}
 .tree {
     position: relative;
     width: 500px;
@@ -51,7 +97,6 @@ body {
     background: linear-gradient(rgba(46, 204, 113, 0), rgba(46, 203, 113, 0.25));
     transform-origin: 50% 0;
     animation: swing 4s calc(var(--i) * -17.13s) ease-in-out infinite;
-    /* animation: swing 4s calc(var(--i) * -0.23s) ease-in-out infinite; */
     height: calc(var(--i) * 4px);
 }
 
@@ -111,18 +156,15 @@ li:nth-child(4n + 3)::before {
         transform: rotate(30deg);
     }
 }
+
     </style>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
 <body>
     <ul class="tree">
         <div class="star"></div>
         <div class="chunk"></div>
-      </ul>
+    </ul>
+    <div class="snow"></div>
 </body>
 <script>
     let tree = document.querySelector(".tree");
