@@ -11,7 +11,7 @@
   position: absolute;
   transform: translate(-50%, -50%);
   top: 60%;
-  left: 90%;
+  left: 70%;
 }
 .container *:before,
 .container *:after {
@@ -92,7 +92,7 @@
 }
 @keyframes wave {
   50% {
-    transform: rotate(5deg);
+    transform: rotate(15deg);
   }
 }
 .hand-r:before {
